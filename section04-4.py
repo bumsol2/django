@@ -6,4 +6,4 @@
 
 # key, Value (Json) -> MongoDB
 # 선언
-a = {'name': "kim', 'Phone' : '010-7777-7777"}
+a = {'name': "kim', 'Phone' : '010-7777-7777", 'birth': 870214}
