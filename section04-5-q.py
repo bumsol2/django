@@ -69,17 +69,26 @@ q12 = (1, 2, 3, 4)
 print("12. ", list(q12))
 
 # 13. 다음 항목을 딕셔너리(dict)으로 선언해보세요. : <성인 - 100000 , 청소년 - 70000 , 아동 - 30000>
-j = {'성인': '100000', '청소년': '70000', '아동': '30000'}
-print(j)
+# q13_dict = {'성인': '100000', '청소년': '70000', '아동': '30000'}
+
+q13_dict = {}
+q13_dict['성인'] = 100000
+q13_dict['청소년'] = 70000
+q13_dict['아동'] = 30000
+
+print("13. ", q13_dict)
 
 # 14. 13번 에서 선언한 dict 항목에 <소아 - 0> 항목을 추가해보세요.
-j['소아'] = 0
-print(j)
+q13_dict['소아'] = 0
+print('14. ', q13_dict)
 
 # 15. 13번에서 선언한 딕셔너리(dict)에서 Key 항목만 출력해보세요.
-print(j.keys())
+print(q13_dict.keys())
+print(list(q13_dict.keys()))
 
 # 16. 13번에서 선언한 딕셔너리(dict)에서 value 항목만 출력해보세요.
-print(j.values())
+print(q13_dict.values())
+print(list(q13_dict.values()))
+print(tuple(q13_dict.values()))
 
 # *** 결과 값만 정확하게 출력되면 됩니다. ^^* 고생하셨습니다. ***
