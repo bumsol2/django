@@ -92,3 +92,4 @@ print(list(q13_dict.values()))
 print(tuple(q13_dict.values()))
 
 # *** 결과 값만 정확하게 출력되면 됩니다. ^^* 고생하셨습니다. ***
+

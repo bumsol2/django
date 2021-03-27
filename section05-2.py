@@ -4,7 +4,7 @@
 
 # 코딩의 핵심 => 조건 해결 중요
 
-# 기본 박복문 : for, while
+# 기본 반복문 : for, while
 
 v1 = 1
 while v1 < 11:
@@ -26,6 +26,51 @@ while cnt1 <= 100:
     sum1 += cnt1
     cnt1 += 1
 
-print('1 ~ 100 : ', sum1)
-print('1 ~ 100 : ', sum(range(1, 101)))
-print('1 ~ 100 : ', sum(range(1, 101, 2)))
+# print('1 ~ 100 : ', sum1)
+# print('1 ~ 100 : ', sum(range(1, 101)))
+# print('1 ~ 100 : ', sum(range(1, 101, 2)))
+
+# 시퀀스(순서가 있는) 자료형 반복
+# 문자열, 리스트, 튜플, 집합, 사전
+# iterable : range, reversed, enumerate, filter, map, zip
+
+names = ["kim", "Park", "Cho", "Choi", "Yoo"]
+
+for b in names:
+    print("You are : ", b)
+
+word = "dreams"
+
+for s in word:
+    print("word : ", s)
+
+my_info = {
+    "name": "Kim",
+    "age": 33,
+    "city": "Seoul"
+}
+
+# 기본 값은 키
+for key in my_info:
+    print("my_info", key)
+
+# 값
+
+for key in my_info.values():
+    print("my_info", key)
+
+# 키
+for key in my_info.keys():
+    print("my_info", key)
+
+# 키 and 값
+for k, v in my_info.items():
+    print("my_info", k, v)
+
+name = "KennRY"
+
+for n in name:
+    if n.isupper():
+        print(n.lower())
+    else:
+        print(n.upper())
