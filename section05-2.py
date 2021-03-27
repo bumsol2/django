@@ -74,3 +74,36 @@ for n in name:
         print(n.lower())
     else:
         print(n.upper())
+
+# break
+numbers = [14, 3, 4, 7, 10, 24, 17, 2, 37, 15, 34, 36, 38]
+
+# for - else 구문이 있다.(반복문이 정상적으로 수행된 경우에 else 블럭 수행)
+for num in numbers:
+    if num == 33:
+        print("found: 33! ")
+        break
+    else:
+        print("not in : 33!")
+else:
+    print("Not found 33...")
+
+# continue
+
+It = ["1", 2, 5, True, 4.3, complex(4)]
+
+for a in It:
+    if 4.3 == a:
+        print("4.3 있슴")
+    else:
+        print("4.3 없음")
+
+for v in It:
+    if type(v) is float:
+        continue
+    print("타입: ", type(v))
+
+name = "Niceman"
+print(reversed(name))
+print(list(reversed(name)))
+print(tuple(reversed(name)))
