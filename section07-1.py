@@ -95,3 +95,4 @@ del user1
 
 print(user2.stock_num)
 print(user3.stock_num)
+
