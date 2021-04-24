@@ -59,10 +59,10 @@ z = 'test'
 # print(x + y) #예외
 # print(x + z)
 
-# print(x + list(y)) # 형변환 
+# print(x + list(y)) # 형변환
 
-# 항상 예외가 발생하지 않을것으로 가정하고 먼저 코딩 
-# 그 후 런타임 예외 발생시 예외 처리 코딩 권장(EAFP 코딩 스타일) 
+# 항상 예외가 발생하지 않을것으로 가정하고 먼저 코딩
+# 그 후 런타임 예외 발생시 예외 처리 코딩 권장(EAFP 코딩 스타일)
 
 # 예외 처리 기본
 # try: 에러가 발생할 가능성이 있는 코드 실행
@@ -76,7 +76,7 @@ z = 'test'
 name = ['Kim', 'Lee', 'Park']
 
 try:
-    z = 'Kim' #cho 예외 발생
+    z = 'Kim'  # cho 예외 발생
     x = name.index(z)
     print('{} Found it! in name'.format(z, x+1))
 except ValueError:
@@ -86,12 +86,54 @@ else:
 
 # 예제2
 
-try:
-    z = 'Jin' 
+try:   #실행할 코드
+    z = 'Kim'
     x = name.index(z)
     print('{} Found it! in name'.format(z, x+1))
-except:
+except:  #예외 발생시 처리하는 코드
     print('Not Found it! - Occurred Error!')
-else:
+else:    #예외 발생 안할시 실행할 코드 
     print('OK! else!')
+finally: # 예외 발생 여부와 상관없이 항상 실행할 코드
+    print('finally ok!')
 
+# 예제 4
+# 예외 처리는 하지 않지만, 무조건 수행되는 코딩 패턴
+
+try:
+    print('Try')
+finally:
+    print('Ok Finally!!!!')
+
+#예제 5
+try:   #실행할 코드
+    z = 'Kim'
+    x = name.index(z)
+    print('{} Found it! in name'.format(z, x+1))
+except ValueError:  #예외 발생시 처리하는 코드
+    print('Not Found it! - ValueError!')
+except IndexError:  #예외 발생시 처리하는 코드
+    print('Not Found it! - IndexError!')
+except Exception:  #예외 발생시 처리하는 코드
+    print('Not Found it! - Occurred Error!')
+else:    #예외 발생 안할시 실행할 코드 
+    print('OK! else!')
+finally: # 예외 발생 여부와 상관없이 항상 실행할 코드
+    print('finally ok!')
+
+# 예외6
+# 예외 발생 : raise
+# raise 키워드로 예외 직접 발생
+
+try:
+    a = '333'
+    if a == 'Kim':
+        print('OK 허가')
+    else:
+        raise IndexError  
+except IndexError:
+    print('문제발생')
+except Exception as f:
+    print(f)
+else:
+    print('OK!')
