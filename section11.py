@@ -4,6 +4,7 @@
 
 # CSV : MIME - text/csv
 
+import pandas as pd
 import csv
 
 # 예제1
@@ -56,3 +57,30 @@ with open('./resource/sample3.csv', 'w', newline='') as f:
 with open('./resource/sample4.csv', 'w', newline='') as f:
     wt = csv.writer(f)
     wt.writerows(w)
+
+# XSL, XLSX : MIME - applications/vnd.excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+# pip install xlrd   설치 필요
+# pip install openpyxl 설치 필요
+# pip install pandas 설치 필요
+
+# openpyxl, xlsxwriter, xlrd, xlwt, xlutils
+# pandas를 주로 사용(openpyxl, xlrd) 포함
+
+
+# sheetname='시트명' 또는 숫자, header=숫자, skiprow=숫자
+xlsx = pd.read_excel('./resource/sample.xlsx')
+
+# 상위 데이터 확인
+print(xlsx.head())
+print()
+
+# 데이터 확인
+print(xlsx.tail())
+
+# 데이터 확인
+print(xlsx.shape)  # 행, 열
+
+# 엑셀 or CSV 다시 쓰기
+xlsx.to_excel('./resource/result.xlsx', index=False)
+xlsx.to_csv('./resource/result.csv', index=False)
